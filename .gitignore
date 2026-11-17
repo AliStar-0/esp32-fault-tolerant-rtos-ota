@@ -5,3 +5,8 @@ sdkconfig
 sdkconfig.old
 managed_components/
 
+# Cryptographic private keys (NEVER commit private keys!)
+keys/*.pem
+certs/*.key
+*.bin
+!keys/.gitkeep
