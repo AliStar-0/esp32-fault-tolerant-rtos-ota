@@ -1,1 +1,7 @@
+# PlatformIO & ESP-IDF build artifacts
+.pio/
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
 
