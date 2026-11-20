@@ -1,0 +1,31 @@
+menu "Fault-Tolerant FreeRTOS Node Configuration"
+
+    config NODE_WIFI_SSID
+        string "Wi-Fi SSID"
+        default "YOUR_WIFI_SSID"
+        help
+            SSID of the Wi-Fi access point for telemetry and OTA updates.
+
+    config NODE_WIFI_PASSWORD
+        string "Wi-Fi Password"
+        default "YOUR_WIFI_PASSWORD"
+        help
+            Wi-Fi password (leave empty for open networks).
+
+    config NODE_OTA_DEFAULT_URL
+        string "Default Signed OTA Firmware URL"
+        default "https://192.168.1.100:8443/firmware_v1.1.0_signed.bin"
+        help
+            HTTPS/HTTP URL serving the signed ESP-IDF application binary.
+
+    config NODE_I2C_SDA_GPIO
+        int "I2C SDA GPIO Number"
+        default 21
+        range 0 39
+
+    config NODE_I2C_SCL_GPIO
+        int "I2C SCL GPIO Number"
+        default 22
+        range 0 39
+
+endmenu
